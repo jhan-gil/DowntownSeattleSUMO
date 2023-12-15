@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-12-12 17:46:57 by Eclipse SUMO GUI Version 1.19.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="clean corrected inputs/offset_signal_Seattle_network_reformed connections2.net.xml"/>
+        <route-files value="adjusted_reduced_od2trips_new_psrc_vehicle_trips_converted_taz.rou.xml, clean corrected inputs/new_bus_link_route.rou.xml, new_ped_od_input.rou.xml"/>
+        <additional-files value="clean corrected inputs/modified_new_Taz_with_pseudo.add.xml,edge_data.add.xml,edge_data_min.add.xml,clean corrected inputs/new_signal_additional.add.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="new output/tripinfo_output.xml"/>
+        <vehroute-output value="new output/vehroute_output.xml"/>
+    </output>
+
+    <time>
+        <begin value="18000"/>
+        <end value="72000"/>
+        <step-length value="0.1"/>
+    </time>
+
+    <processing>
+        <extrapolate-departpos value="true"/>
+        <threads value="4"/>
+        <ignore-junction-blocker value="60"/>
+        <ignore-route-errors value="true"/>
+        <ignore-accidents value="true"/>
+        <collision.action value="remove"/>
+        <time-to-teleport value="150"/>
+        <sloppy-insert value="true"/>
+        <lanechange.overtake-right value="true"/>
+    </processing>
+
+    <routing>
+        <routing-algorithm value="astar"/>
+        <weights.priority-factor value="10"/>
+        <device.rerouting.probability value="0.8"/>
+        <device.rerouting.period value="200"/>
+        <device.rerouting.with-taz value="true"/>
+        <device.rerouting.threads value="4"/>
+    </routing>
+
+    <report>
+        <log value="new output/log.xml"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="61925"/>
+    </traci_server>
+
+</configuration>

@@ -1,0 +1,7 @@
+numpy~=1.21.5
+traci~=1.19.0
+pandas~=1.5.3
+sumolib~=1.19.0
+h5py
+tqdm
+geopandas

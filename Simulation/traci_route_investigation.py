@@ -2,7 +2,6 @@ import sys
 import numpy as np
 import pickle
 import traci
-# import libsumo as traci
 
 edge_list_address = 'valid_edges_2023-06-29 12 09 55.txt'
 traci_edge_vehicle_address = 'new output/edge_vehicle_output_min.pickle'

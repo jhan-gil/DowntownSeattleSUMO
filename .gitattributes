@@ -1,3 +1,4 @@
 *.csv filter=lfs diff=lfs merge=lfs -text
 vehroute_output.xml filter=lfs diff=lfs merge=lfs -text
 tripinfo_output.xml filter=lfs diff=lfs merge=lfs -text
+edge_data_output_min.xml filter=lfs diff=lfs merge=lfs -text

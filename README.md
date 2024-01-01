@@ -2,11 +2,14 @@
 In this work, we simulated passenger vehicles and public transportation of Downtown seattle between 5 to 10 AM. The exact simulation period could be modified in step3 of demand generation and in sumocfg file. 
 Our network includes south of Mercer St, west of 12th Ave, and north of S Holgate St.
 
-![The network and the TAZs used in the simulation](https://github.com/BlueSoheil99/DowntownSeattleSUMO/blob/main/network%20image.png?raw=true)
+<p align="center" width="100%">
+    <img width="75%" src="https://github.com/BlueSoheil99/DowntownSeattleSUMO/blob/main/network%20image.png?raw=true"><br>
+The network and the TAZs used in the simulation<br>
+</p>
 
 - A more detailed documentation will be linked soon. 
 - This work was based upon the simulation in
-https://github.com/Yiran6/MatSumo (private repo). It also included pedestrians. That simulation could be found in `old files` folder.
+https://github.com/Yiran6/MatSumo (private repo). It also included pedestrians. That simulation could be found in `simulation/old files` folder.
 
 Our work was divided into two sections, generating a  demand file (rou.xml) based on the real-world data
 and running a reasonable simulation in SUMO.
@@ -18,18 +21,19 @@ Demand generation takes place in four steps and
 final output of each step is the input of the next step. Output of the 4th step is the input for the simulation (route file).
 - **Step1: Trip generation**
   - Run `step1-read h5.ipynb`
-  - Input(s): PSRC trip dataset, estimated for Puget sound population. 
-  <span style="color: red;"> The data file is not uploaded yet (1 GB).</span>
+  - Input(s): PSRC trip dataset, estimated for Puget sound population.
+  
   - Output: `psrc_vehicle_trips.csv`, shows [otaz,dtaz,deptm,travtime] for each trip.
-    <span style="color: red;"> This also is not uploaded yet (160MB).</span>
   - Description:
     - In this step, we work on trip data of individuals. Each row of the input file shows a trip for a person which could be done in different modes. 
     We first find trips done with cars. Then we try to remove the trips that were shared but used one vehicle (duplicate trips shared between different people).
     -   <span style="color: red;"> Trips are happening in different days and we have not taken that into account. </span>
-    -   <span style="color: green;"> add a picture of departure times </span>
 
+  <p align="center" width="100%">
+    <img width="60%" src="https://github.com/BlueSoheil99/DowntownSeattleSUMO/blob/main/departure%20distribution.png?raw=true"><br>
+  Departure time of trips during 24 hours <br>
+  </p>
 
-  
 - **Step2: TAZ calibration**
   - Run `step2-taz filteration_conversion-v.2.ipynb`
   - Input(s): `psrc_vehicle_trips.csv`, `taz2010.shp`, `modified_new_Taz_with_pseudo.add.xml`, TAZ list of different super TAZs (`regions` folder)
@@ -117,6 +121,7 @@ route files generated with od2trips.
 ----
 ## Results
 In the simulation folder, there are three folders containing three different simulation results. 
-- CodeA:
-- CodeB:
-- CodeC:
+- CodeA: TAZ-TAZ demand format, 15% demand reduction from SR99N and 10% from I5S, ends at 10:45 AM
+- CodeB: TAZ-TAZ demand format, for trips from SR99N to upper half of network: 25% demand reduction and 20% transferred to I5N, ends at 10:30 AM
+- CodeC: TAZ-link demand format, for trips from SR99N to upper half of network: 30% demand reduction and 15% transferred to I5N, ends at 10:30 AM
+- Old simulation: ends at 15PM

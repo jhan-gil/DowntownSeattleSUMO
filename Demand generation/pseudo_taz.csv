@@ -1,13 +1,3 @@
-﻿pseudo_id,location
-5000,I-5Nin
-5001,I-5Nout
-5002,I-5Sin
-5003,I-5Sout
-5004,I-90in
-5005,I-90out
-5006,Eastin
-5007,Eastout
-5008,SR-99Sin
-5009,SR-99Sout
-5010,SR-99Nin
-5011,SR-99Nout
+version https://git-lfs.github.com/spec/v1
+oid sha256:420a9f5c974dfd63232aa600efa4e7bac5e150dbbffd89639945bfb48c5b409f
+size 180

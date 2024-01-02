@@ -7,7 +7,7 @@ Our network includes south of Mercer St, west of 12th Ave, and north of S Holgat
 The network and the TAZs used in the simulation<br>
 </p>
 
-- A more detailed documentation will be linked soon. 
+- A more detailed documentation: [link](https://docs.google.com/document/d/11r4mTBNbqs4V5_dtWj9PiZJL7NsJ5M6Q/edit?usp=sharing&ouid=104702134464019992770&rtpof=true&sd=true)
 - This work was based upon the simulation in
 https://github.com/Yiran6/MatSumo (private repo). It also included pedestrians. That simulation could be found in `simulation/old files` folder.
 
@@ -22,7 +22,9 @@ final output of each step is the input of the next step. Output of the 4th step 
 - **Step1: Trip generation**
   - Run `step1-read h5.ipynb`
   - Input(s): PSRC trip dataset, estimated for Puget sound population.
-  
+  <span style="color: red;"> Due to Github space limitation, the source file has not been uploaded yet.</span>
+  Using a UW email, you can access through this [link](https://drive.google.com/drive/folders/1KIlRBGK1AhPe5t2rL66fhlWQGoFRLiWj?usp=sharing).
+
   - Output: `psrc_vehicle_trips.csv`, shows [otaz,dtaz,deptm,travtime] for each trip.
   - Description:
     - In this step, we work on trip data of individuals. Each row of the input file shows a trip for a person which could be done in different modes. 
